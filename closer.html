@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h5>Closers in javascript?</h5>
+        <p> A closer is function it can access the parent scope even ofter the parent function as closed.</p>
+        <script>
+            function outer(){
+                var x=10
+                function inner(){
+                    document.write(x)
+                }
+                 inner()
+            }
+        outer()
+        </script>
+        <script>
+            function outer1(num1){
+                
+                function inner1(num2){
+                    document.write(num1+num2)
+                }
+                return inner1
+            }
+            var result= outer1(12)
+            result(34)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h5>Value of this keyword out side a function/object:</h5>
+        <p>"this" is referance of window object </p>
+        <h5>Value of this keyword inside a regular function:</h5>
+        <p>"this" is referance of window object"</p>
+        <h5>Value of this keyword inside a objectmethod:</h5>
+        <p> "this" is referance of object"</p>
+        <h5>Value of this keyword inside a eventhandler</h5>
+        <p> this" is element</p>
+        <h5>Value of this keyword inside a function in strictmod</h5>
+        <p>"this" is undefined"</p>
+    </body>
+    <script>
+        var a=10;
+        console.log(this)
+        console.log(window.a)
+        console.log(a)
+        console.log(this.a)
+    </script>
+    <script>
+        var b= 12
+        function test(){
+            console.log(this)
+       console.log(this.b)
+       console.log(window.b)
+        }
+        test()
+    </script>
+    <script>
+        var movie={
+            name:"RRR",
+            getName:function(){
+                console.log(this)
+                console.log(this.name)
+            }
+        }
+        movie.getName()
+    </script>
+    <scriptt>
+        <input type="button" value="click me" onclick="console.log(this)">
+    </scriptt>
+    <script>
+        "use strict";
+        function myFunction() {
+         console.log(this)
+        }
+        myFunction()
+    </script>
+</html>

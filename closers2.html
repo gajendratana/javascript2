@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="button" onclick="updateCounter2()" value="clicked">
+        <p id="demo">counter:0</p>
+        <script>
+            function updateCounter(){
+                var counter=2;
+                function inner(){
+                    counter=counter+2
+                      var p= document.getElementById("demo")
+                      p.innerText= counter
+                }
+                return inner ;
+            }
+        var updateCounter2=updateCounter()
+        </script>
+    </body>
+</html>

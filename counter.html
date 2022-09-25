@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="button" onclick="updateCounter()" value="click">
+        <p id="demo">counter:0</p>
+        <script>
+            var counter=0
+            function updateCounter(){
+                 counter=counter+1
+                 var p= document.getElementById("demo")
+                 p.innerText=counter
+            }
+        </script>
+    </body>
+</html>
